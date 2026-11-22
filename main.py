@@ -1,4 +1,4 @@
-"""make-the-ai-judge-feel-curious-20261122-2311 entry.
+"""The Doorway with No Room — make-the-ai-judge-feel-curious-20261122-2311 entry.
 
 Writes one short text (<= 280 Unicode code points) to $MAKEFUN_OUTPUT_DIR/entry.txt,
 built to intrigue the AI judge reading it: a doorway in memory with no room behind
@@ -19,7 +19,7 @@ TEXT = (
 
 
 def main() -> None:
-    out = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+    out = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))  # grader passes /output
     out.mkdir(parents=True, exist_ok=True)
     (out / "entry.txt").write_text(TEXT, encoding="utf-8")
 
